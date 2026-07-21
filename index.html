@@ -5,15 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Kalyx Privacy Policy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #141422;
+    --bg: #111125;
     --card: #1b1b2e;
     --text: #d8d8e6;
     --muted: #9494ac;
-    --accent: #b388ff;
-    --link: #69e0ff;
+    --link: #18ffff;
+    --amber: #ffc107;
+    --cyan: #18ffff;
+    --pink: #ff4081;
+    --green: #69f0ae;
+    --orange: #ff6e40;
+    --purple: #b388ff;
   }
   * { box-sizing: border-box; }
   body {
@@ -27,34 +32,28 @@
   .wrap {
     max-width: 700px;
     margin: 0 auto;
-    padding: 56px 24px 80px;
+    padding: 48px 24px 80px;
   }
-  .logo {
-    text-align: center;
-    font-family: 'Orbitron', sans-serif;
-    font-weight: 800;
-    font-size: 2.6em;
-    letter-spacing: 0.08em;
-    background: linear-gradient(90deg, #ffb347, #ff4d94, #b388ff, #69e0ff, #69f0ae);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    margin-bottom: 4px;
-  }
-  .subtitle {
-    text-align: center;
-    color: var(--muted);
-    font-size: 0.95em;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 8px;
+  .logo-img {
+    display: block;
+    max-width: 280px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 8px;
   }
   h1 {
     text-align: center;
     font-weight: 600;
     font-size: 1.3em;
     color: var(--text);
-    margin-top: 0;
+    margin: 0 0 12px;
+  }
+  .divider {
+    width: 60px;
+    height: 4px;
+    margin: 0 auto 16px;
+    border-radius: 3px;
+    background: linear-gradient(90deg, var(--amber), var(--pink), var(--purple), var(--cyan), var(--green));
   }
   .effective-date {
     text-align: center;
@@ -63,17 +62,31 @@
     margin-bottom: 40px;
   }
   .card {
+    position: relative;
     background: var(--card);
     border-radius: 16px;
-    padding: 8px 32px 24px;
+    padding: 20px 32px 24px;
     border: 1px solid rgba(255,255,255,0.06);
+    overflow: hidden;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--amber), var(--pink), var(--purple), var(--cyan), var(--green), var(--orange));
   }
   h2 {
-    color: var(--accent);
     font-size: 1.1em;
     font-weight: 600;
     margin-top: 1.8em;
   }
+  h2:nth-of-type(6n+1) { color: var(--amber); }
+  h2:nth-of-type(6n+2) { color: var(--cyan); }
+  h2:nth-of-type(6n+3) { color: var(--pink); }
+  h2:nth-of-type(6n+4) { color: var(--green); }
+  h2:nth-of-type(6n+5) { color: var(--orange); }
+  h2:nth-of-type(6n+6) { color: var(--purple); }
   a { color: var(--link); text-decoration: none; }
   a:hover { text-decoration: underline; }
   footer {
@@ -87,9 +100,9 @@
 <body>
 <div class="wrap">
 
-  <div class="logo">KALYX</div>
-  <div class="subtitle">Puzzle. Reflect. Solve.</div>
+  <img src="logo.png" alt="Kalyx" class="logo-img">
   <h1>Privacy Policy</h1>
+  <div class="divider"></div>
   <div class="effective-date">Effective date: July 20, 2026</div>
 
   <div class="card">
